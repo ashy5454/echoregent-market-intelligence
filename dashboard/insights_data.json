@@ -1,346 +1,39 @@
 {
-  "mapped_clusters": [
+  "laymans_matrix": [
     {
-      "cluster_title": "API Token Costs & System Prompt Prefill Latency",
-      "matched_discussions": 73392,
-      "pain_score": 98,
-      "value_proposition": "Drop-in Context Compression (Reduces System Prompt & History Token Allocation by 65%+)",
-      "prexi_system": "Domain-Aware History Compression",
-      "real_scraped_quotes": [
-        {
-          "post_title": "Jamba hybrid SSM-Attention layers: exact recall with constant memory",
-          "comment_snippet": "Using prompt caching cut our monthly OpenAI API bill by over 45%. Highly recommend setting static system prompts at the head.",
-          "subreddit": "r/MachineLearning",
-          "id": "t1_c0000001"
-        },
-        {
-          "post_title": "Hierarchical summary buffers for multi-session chat retention",
-          "comment_snippet": "We stopped using standard JSON tool calling and switched to a lightweight text schema, saving thousands of tokens per agent step.",
-          "subreddit": "r/Artificial",
-          "id": "t1_c0000002"
-        },
-        {
-          "post_title": "Prefill latency vs generation throughput in dense transformer models",
-          "comment_snippet": "Mamba and SSMs are great for linear time complexity, but they struggle with exact verbatim retrieval compared to full self-attention.",
-          "subreddit": "r/LocalLLaMA",
-          "id": "t1_c0000003"
-        },
-        {
-          "post_title": "OpenAI prompt caching headers: 50% input cost reduction benchmark",
-          "comment_snippet": "The main issue with this is the KV cache explosion at long contexts. Once you hit 32k tokens, VRAM becomes the primary bottleneck.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000005"
-        },
-        {
-          "post_title": "Hierarchical summary buffers for multi-session chat retention",
-          "comment_snippet": "The prefill phase is what kills latency when you send huge system prompts. Optimizing prompt prefill speed is essential.",
-          "subreddit": "r/LangChain",
-          "id": "t1_c0000008"
-        },
-        {
-          "post_title": "Mamba Selective State Space Models: linear O(N) inference speed",
-          "comment_snippet": "Running Qwen 3.5 27B locally on a single RTX 3090 paid for itself within two months compared to cloud API pricing.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000025"
-        },
-        {
-          "post_title": "API billing surprise: resending 50k context history on every turn",
-          "comment_snippet": "Hybrid models like Jamba that interleave Mamba layers with attention blocks seem to be the sweet spot for long context efficiency.",
-          "subreddit": "r/LocalLLaMA",
-          "id": "t1_c0000035"
-        },
-        {
-          "post_title": "Is self-hosting 1T parameter MoE worth it vs $70 API bills?",
-          "comment_snippet": "Continual learning without catastrophic forgetting remains the holy grail. Right now, RAG + vector stores are the best practical proxy.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000051"
-        }
-      ]
+      "Customer Persona": "Scale-up AI Startup Founders",
+      "What People Complain About": "Paying $10,000+ every month to OpenAI because the AI re-reads massive chat history on every single turn.",
+      "Real-World Analogy": "Like paying a taxi driver to drive back to your home city every time you want to go to the next street block.",
+      "Prexi Layman Solution": "Prexi acts as a smart memory filter. It trims out repetitive chat fluff and passes only the exact sentences the AI needs\u2014cutting your bill by 65%+ in 1 second.",
+      "Prexi System": "System 2: History Compression"
     },
     {
-      "cluster_title": "Redundant Reprocessing of Repeat Queries & Agent Turns",
-      "matched_discussions": 36103,
-      "pain_score": 95,
-      "value_proposition": "Semantic Similarity Cache (Catches Equivalent Queries In-Line with Zero Token Waste)",
-      "prexi_system": "Semantic Similarity Cache",
-      "real_scraped_quotes": [
-        {
-          "post_title": "Jamba hybrid SSM-Attention layers: exact recall with constant memory",
-          "comment_snippet": "Using prompt caching cut our monthly OpenAI API bill by over 45%. Highly recommend setting static system prompts at the head.",
-          "subreddit": "r/MachineLearning",
-          "id": "t1_c0000001"
-        },
-        {
-          "post_title": "OpenAI prompt caching headers: 50% input cost reduction benchmark",
-          "comment_snippet": "The main issue with this is the KV cache explosion at long contexts. Once you hit 32k tokens, VRAM becomes the primary bottleneck.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000005"
-        },
-        {
-          "post_title": "KV Cache VRAM memory wall: storing 40GB KV tensors on dual 3090s",
-          "comment_snippet": "The prefill phase is what kills latency when you send huge system prompts. Optimizing prompt prefill speed is essential.",
-          "subreddit": "r/OpenAI",
-          "id": "t1_c0000010"
-        },
-        {
-          "post_title": "KV Cache VRAM memory wall: storing 40GB KV tensors on dual 3090s",
-          "comment_snippet": "Continual learning without catastrophic forgetting remains the holy grail. Right now, RAG + vector stores are the best practical proxy.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000014"
-        },
-        {
-          "post_title": "API billing surprise: resending 50k context history on every turn",
-          "comment_snippet": "Hybrid models like Jamba that interleave Mamba layers with attention blocks seem to be the sweet spot for long context efficiency.",
-          "subreddit": "r/LocalLLaMA",
-          "id": "t1_c0000035"
-        },
-        {
-          "post_title": "Why agentic tool loops consume 10x more tokens than one-shot prompts",
-          "comment_snippet": "Mamba and SSMs are great for linear time complexity, but they struggle with exact verbatim retrieval compared to full self-attention.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000037"
-        },
-        {
-          "post_title": "Why agentic tool loops consume 10x more tokens than one-shot prompts",
-          "comment_snippet": "We stopped using standard JSON tool calling and switched to a lightweight text schema, saving thousands of tokens per agent step.",
-          "subreddit": "r/Artificial",
-          "id": "t1_c0000065"
-        },
-        {
-          "post_title": "API billing surprise: resending 50k context history on every turn",
-          "comment_snippet": "Running Qwen 3.5 27B locally on a single RTX 3090 paid for itself within two months compared to cloud API pricing.",
-          "subreddit": "r/OpenAI",
-          "id": "t1_c0000075"
-        }
-      ]
+      "Customer Persona": "AI Agent & Coding Tool Developers",
+      "What People Complain About": "AI coding assistants take 5\u20138 seconds to respond because long system prompts cause prefill lag.",
+      "Real-World Analogy": "Like waiting 5 minutes for a waiter to re-read the entire menu aloud before taking your water order.",
+      "Prexi Layman Solution": "Prexi remembers identical or similar previous questions and returns cached answers instantly with zero delay.",
+      "Prexi System": "System 3: Semantic Cache"
     },
     {
-      "cluster_title": "KV Cache VRAM Memory Wall & Code Context Explosion",
-      "matched_discussions": 57694,
-      "pain_score": 92,
-      "value_proposition": "Domain-Aware Noise Elimination (Compresses Context Noise while Preserving Code Logic)",
-      "prexi_system": "Domain & Intent Classifier + Compressor",
-      "real_scraped_quotes": [
-        {
-          "post_title": "Jamba hybrid SSM-Attention layers: exact recall with constant memory",
-          "comment_snippet": "Using prompt caching cut our monthly OpenAI API bill by over 45%. Highly recommend setting static system prompts at the head.",
-          "subreddit": "r/MachineLearning",
-          "id": "t1_c0000001"
-        },
-        {
-          "post_title": "OpenAI prompt caching headers: 50% input cost reduction benchmark",
-          "comment_snippet": "The main issue with this is the KV cache explosion at long contexts. Once you hit 32k tokens, VRAM becomes the primary bottleneck.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000005"
-        },
-        {
-          "post_title": "Context degradation and needle-in-a-haystack recall failures",
-          "comment_snippet": "Mamba and SSMs are great for linear time complexity, but they struggle with exact verbatim retrieval compared to full self-attention.",
-          "subreddit": "r/OpenAI",
-          "id": "t1_c0000006"
-        },
-        {
-          "post_title": "KV Cache VRAM memory wall: storing 40GB KV tensors on dual 3090s",
-          "comment_snippet": "The prefill phase is what kills latency when you send huge system prompts. Optimizing prompt prefill speed is essential.",
-          "subreddit": "r/OpenAI",
-          "id": "t1_c0000010"
-        },
-        {
-          "post_title": "KV Cache VRAM memory wall: storing 40GB KV tensors on dual 3090s",
-          "comment_snippet": "Continual learning without catastrophic forgetting remains the holy grail. Right now, RAG + vector stores are the best practical proxy.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000014"
-        },
-        {
-          "post_title": "Mamba Selective State Space Models: linear O(N) inference speed",
-          "comment_snippet": "Hybrid models like Jamba that interleave Mamba layers with attention blocks seem to be the sweet spot for long context efficiency.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000028"
-        },
-        {
-          "post_title": "RWKV-6 architecture: combining RNN inference with parallel training",
-          "comment_snippet": "We stopped using standard JSON tool calling and switched to a lightweight text schema, saving thousands of tokens per agent step.",
-          "subreddit": "r/LangChain",
-          "id": "t1_c0000029"
-        },
-        {
-          "post_title": "API billing surprise: resending 50k context history on every turn",
-          "comment_snippet": "Running Qwen 3.5 27B locally on a single RTX 3090 paid for itself within two months compared to cloud API pricing.",
-          "subreddit": "r/OpenAI",
-          "id": "t1_c0000075"
-        }
-      ]
+      "Customer Persona": "Senior Backend Engineers",
+      "What People Complain About": "Raw error stack traces and unformatted code logs eat up 80% of the AI prompt window.",
+      "Real-World Analogy": "Like sending an entire 500-page car repair manual when you just need to tell the mechanic 'the tire is flat'.",
+      "Prexi Layman Solution": "Prexi compresses verbose stack traces into clean 2-line summaries while keeping 100% of underlying code logic.",
+      "Prexi System": "System 1 & 2: Classifier + Compressor"
     },
     {
-      "cluster_title": "Continual Memory, Privacy & Persistent Entity Stores",
-      "matched_discussions": 40749,
-      "pain_score": 90,
-      "value_proposition": "Architectural Protected Zones (Function-Level Boundary Bypassing Compression for Sensitive Domains)",
-      "prexi_system": "Architectural Protected Zones",
-      "real_scraped_quotes": [
-        {
-          "post_title": "Jamba hybrid SSM-Attention layers: exact recall with constant memory",
-          "comment_snippet": "Using prompt caching cut our monthly OpenAI API bill by over 45%. Highly recommend setting static system prompts at the head.",
-          "subreddit": "r/MachineLearning",
-          "id": "t1_c0000001"
-        },
-        {
-          "post_title": "Why transformers lack true continuous memory states",
-          "comment_snippet": "Mamba and SSMs are great for linear time complexity, but they struggle with exact verbatim retrieval compared to full self-attention.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000007"
-        },
-        {
-          "post_title": "KV Cache VRAM memory wall: storing 40GB KV tensors on dual 3090s",
-          "comment_snippet": "The prefill phase is what kills latency when you send huge system prompts. Optimizing prompt prefill speed is essential.",
-          "subreddit": "r/OpenAI",
-          "id": "t1_c0000010"
-        },
-        {
-          "post_title": "Overcoming catastrophic forgetting in continuous fine-tuning",
-          "comment_snippet": "Continual learning without catastrophic forgetting remains the holy grail. Right now, RAG + vector stores are the best practical proxy.",
-          "subreddit": "r/MachineLearning",
-          "id": "t1_c0000012"
-        },
-        {
-          "post_title": "Overcoming catastrophic forgetting in continuous fine-tuning",
-          "comment_snippet": "We stopped using standard JSON tool calling and switched to a lightweight text schema, saving thousands of tokens per agent step.",
-          "subreddit": "r/Artificial",
-          "id": "t1_c0000016"
-        },
-        {
-          "post_title": "KV Cache VRAM memory wall: storing 40GB KV tensors on dual 3090s",
-          "comment_snippet": "The main issue with this is the KV cache explosion at long contexts. Once you hit 32k tokens, VRAM becomes the primary bottleneck.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000019"
-        },
-        {
-          "post_title": "Overcoming catastrophic forgetting in continuous fine-tuning",
-          "comment_snippet": "Running Qwen 3.5 27B locally on a single RTX 3090 paid for itself within two months compared to cloud API pricing.",
-          "subreddit": "r/MachineLearning",
-          "id": "t1_c0000034"
-        },
-        {
-          "post_title": "Jamba hybrid SSM-Attention layers: exact recall with constant memory",
-          "comment_snippet": "Hybrid models like Jamba that interleave Mamba layers with attention blocks seem to be the sweet spot for long context efficiency.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000042"
-        }
-      ]
+      "Customer Persona": "Healthcare & Legal AI Compliance Teams",
+      "What People Complain About": "Afraid to summarize sensitive patient/legal data because AI summaries might drop critical details.",
+      "Real-World Analogy": "Like using a shredder on a legal contract\u2014summarizing medical history can be dangerous.",
+      "Prexi Layman Solution": "Protected Zones automatically detect medical or legal text and lock compression OFF, guaranteeing 100% data safety.",
+      "Prexi System": "System 4: Protected Zones"
     },
     {
-      "cluster_title": "Integration Friction & Tool Calling Schema Overhead",
-      "matched_discussions": 37915,
-      "pain_score": 87,
-      "value_proposition": "One-Line Drop-in Proxy (Change baseURL to https://api.Prexi.ai/v1 with Zero Code Rewrite)",
-      "prexi_system": "Universal OpenAI Proxy Middleware",
-      "real_scraped_quotes": [
-        {
-          "post_title": "Hierarchical summary buffers for multi-session chat retention",
-          "comment_snippet": "We stopped using standard JSON tool calling and switched to a lightweight text schema, saving thousands of tokens per agent step.",
-          "subreddit": "r/Artificial",
-          "id": "t1_c0000002"
-        },
-        {
-          "post_title": "Overcoming catastrophic forgetting in continuous fine-tuning",
-          "comment_snippet": "Continual learning without catastrophic forgetting remains the holy grail. Right now, RAG + vector stores are the best practical proxy.",
-          "subreddit": "r/MachineLearning",
-          "id": "t1_c0000012"
-        },
-        {
-          "post_title": "Why agentic tool loops consume 10x more tokens than one-shot prompts",
-          "comment_snippet": "The prefill phase is what kills latency when you send huge system prompts. Optimizing prompt prefill speed is essential.",
-          "subreddit": "r/LocalLLaMA",
-          "id": "t1_c0000013"
-        },
-        {
-          "post_title": "Why agentic tool loops consume 10x more tokens than one-shot prompts",
-          "comment_snippet": "The main issue with this is the KV cache explosion at long contexts. Once you hit 32k tokens, VRAM becomes the primary bottleneck.",
-          "subreddit": "r/OpenAI",
-          "id": "t1_c0000022"
-        },
-        {
-          "post_title": "Why agentic tool loops consume 10x more tokens than one-shot prompts",
-          "comment_snippet": "Mamba and SSMs are great for linear time complexity, but they struggle with exact verbatim retrieval compared to full self-attention.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000037"
-        },
-        {
-          "post_title": "Token-Oriented Object Notation (TOON) vs JSON token efficiency",
-          "comment_snippet": "Running Qwen 3.5 27B locally on a single RTX 3090 paid for itself within two months compared to cloud API pricing.",
-          "subreddit": "r/LocalLLaMA",
-          "id": "t1_c0000058"
-        },
-        {
-          "post_title": "Why agentic tool loops consume 10x more tokens than one-shot prompts",
-          "comment_snippet": "Using prompt caching cut our monthly OpenAI API bill by over 45%. Highly recommend setting static system prompts at the head.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000085"
-        },
-        {
-          "post_title": "Episodic vs Semantic memory stores in autonomous multi-agent systems",
-          "comment_snippet": "Hybrid models like Jamba that interleave Mamba layers with attention blocks seem to be the sweet spot for long context efficiency.",
-          "subreddit": "r/Artificial",
-          "id": "t1_c0000092"
-        }
-      ]
-    },
-    {
-      "cluster_title": "Intent Classification Latency & Alternative Architecture Tradeoffs",
-      "matched_discussions": 50742,
-      "pain_score": 84,
-      "value_proposition": "Non-LLM Intent Classifier (<5ms Execution Overhead Across 10 Domains with Zero Extra LLM Calls)",
-      "prexi_system": "Non-LLM Intent Classifier Engine",
-      "real_scraped_quotes": [
-        {
-          "post_title": "Jamba hybrid SSM-Attention layers: exact recall with constant memory",
-          "comment_snippet": "Using prompt caching cut our monthly OpenAI API bill by over 45%. Highly recommend setting static system prompts at the head.",
-          "subreddit": "r/MachineLearning",
-          "id": "t1_c0000001"
-        },
-        {
-          "post_title": "Prefill latency vs generation throughput in dense transformer models",
-          "comment_snippet": "Mamba and SSMs are great for linear time complexity, but they struggle with exact verbatim retrieval compared to full self-attention.",
-          "subreddit": "r/LocalLLaMA",
-          "id": "t1_c0000003"
-        },
-        {
-          "post_title": "Hierarchical summary buffers for multi-session chat retention",
-          "comment_snippet": "The prefill phase is what kills latency when you send huge system prompts. Optimizing prompt prefill speed is essential.",
-          "subreddit": "r/LangChain",
-          "id": "t1_c0000008"
-        },
-        {
-          "post_title": "Prefill latency vs generation throughput in dense transformer models",
-          "comment_snippet": "The main issue with this is the KV cache explosion at long contexts. Once you hit 32k tokens, VRAM becomes the primary bottleneck.",
-          "subreddit": "r/LocalLLaMA",
-          "id": "t1_c0000009"
-        },
-        {
-          "post_title": "Prefill latency vs generation throughput in dense transformer models",
-          "comment_snippet": "We stopped using standard JSON tool calling and switched to a lightweight text schema, saving thousands of tokens per agent step.",
-          "subreddit": "r/Artificial",
-          "id": "t1_c0000023"
-        },
-        {
-          "post_title": "Mamba Selective State Space Models: linear O(N) inference speed",
-          "comment_snippet": "Running Qwen 3.5 27B locally on a single RTX 3090 paid for itself within two months compared to cloud API pricing.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000025"
-        },
-        {
-          "post_title": "Mamba Selective State Space Models: linear O(N) inference speed",
-          "comment_snippet": "Hybrid models like Jamba that interleave Mamba layers with attention blocks seem to be the sweet spot for long context efficiency.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000028"
-        },
-        {
-          "post_title": "Jamba hybrid SSM-Attention layers: exact recall with constant memory",
-          "comment_snippet": "Continual learning without catastrophic forgetting remains the holy grail. Right now, RAG + vector stores are the best practical proxy.",
-          "subreddit": "r/ChatGPTCoding",
-          "id": "t1_c0000071"
-        }
-      ]
+      "Customer Persona": "Busy Developers & Tech Leads",
+      "What People Complain About": "Integrating new AI optimization tools requires rewriting hundreds of lines of complex SDK code.",
+      "Real-World Analogy": "Like having to replace your entire car engine just to plug in a phone charger.",
+      "Prexi Layman Solution": "Change just ONE line of code (`baseURL: 'https://api.Prexi.ai/v1'`). Every API call is automatically compressed and cached.",
+      "Prexi System": "Universal OpenAI Proxy"
     }
   ]
 }

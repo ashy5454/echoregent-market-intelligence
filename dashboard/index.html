@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prexi / Echoregent - Real Reddit Data & Value Prop Intelligence</title>
+    <title>Prexi / Echoregent - Layman's Terms & Customer Intelligence</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -26,60 +26,58 @@
         .brand h1 { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, var(--cyan), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .brand p { color: var(--text-sub); font-size: 14px; margin-top: 4px; }
 
-        .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
-        .metric-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
-        .metric-card span { font-size: 12px; color: var(--text-sub); text-transform: uppercase; letter-spacing: 0.5px; }
-        .metric-card h2 { font-size: 28px; font-weight: 700; margin-top: 4px; color: var(--cyan); }
-        .metric-card .sub { font-size: 12px; color: var(--green); margin-top: 4px; }
+        .persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+        .persona-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+        .persona-card strong { color: var(--cyan); font-size: 16px; display: block; margin-bottom: 6px; }
+        .persona-card p { font-size: 13px; color: var(--text-sub); line-height: 1.5; }
 
-        .cluster-list { display: flex; flex-direction: column; gap: 24px; }
-        .cluster-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 24px; }
-        .cluster-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-        .cluster-title { font-size: 20px; font-weight: 700; color: #fff; }
-        .cluster-vol { background: rgba(56, 189, 248, 0.15); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 14px; border-radius: 12px; font-size: 13px; font-weight: 600; }
-
-        .value-prop-box { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); padding: 16px; border-radius: 14px; margin-bottom: 16px; }
-        .value-prop-box strong { color: var(--green); font-size: 14px; display: block; margin-bottom: 4px; }
-        .value-prop-box p { font-size: 14px; color: #fff; line-height: 1.4; }
-
-        .quotes-list { display: flex; flex-direction: column; gap: 10px; }
-        .quote-item { background: rgba(0, 0, 0, 0.3); border: 1px solid var(--border); padding: 14px; border-radius: 12px; font-size: 13px; line-height: 1.5; }
-        .quote-sub { font-size: 11px; color: var(--purple); font-weight: 600; margin-bottom: 4px; }
-        .quote-text { color: var(--text-main); font-style: italic; }
+        .matrix-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 24px; }
+        .matrix-table th { background: #0f172a; color: #fff; padding: 14px 16px; text-align: left; font-size: 13px; border-bottom: 1px solid var(--border); }
+        .matrix-table td { padding: 14px 16px; font-size: 13px; color: var(--text-sub); border-bottom: 1px solid var(--border); line-height: 1.5; }
+        .matrix-table tr:hover { background: rgba(255, 255, 255, 0.02); }
+        .td-cust { color: var(--cyan); font-weight: 700; }
+        .td-sol { color: var(--green); font-weight: 600; }
+        .td-analogy { font-style: italic; color: var(--amber); }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="brand">
-            <h1>🚀 Prexi / Echoregent Real Data & Value Prop Intelligence</h1>
-            <p>100,000 Real Scraped Reddit Discussions Mapped Directly to Prexi Value Propositions</p>
+            <h1>🚀 Prexi / Echoregent Layman's Terms & Customer Intelligence</h1>
+            <p>Plain English Problem-Solution Mapping, Real-World Analogies & Customer Personas</p>
         </div>
     </div>
 
-    <div class="metrics-grid">
-        <div class="metric-card">
-            <span>Scraped Discussions</span>
-            <h2>100,000</h2>
-            <div class="sub">100% Real Scraped Data</div>
+    <!-- 3 Customer Personas -->
+    <h3 style="font-size: 18px; margin-bottom: 14px; color: #fff;">👤 Who Our Customers Are (Ideal Customer Profiles)</h3>
+    <div class="persona-grid">
+        <div class="persona-card">
+            <strong>Persona A: AI Startup Founders</strong>
+            <p>Founders running multi-turn AI products whose monthly OpenAI/Claude bills are scaling out of control ($10k-$50k+/month), destroying gross profit margins.</p>
         </div>
-        <div class="metric-card">
-            <span>Matched Discussions</span>
-            <h2>73,392</h2>
-            <div class="sub">API Token Cost Cluster</div>
+        <div class="persona-card">
+            <strong>Persona B: AI Coding Tool Devs</strong>
+            <p>Developers building autonomous agents or coding extensions. Long system prompts cause 3-8 second prefill delays, making tools feel sluggish.</p>
         </div>
-        <div class="metric-card">
-            <span>Prexi Value Prop</span>
-            <h2>65%+ Cost Cut</h2>
-            <div class="sub">Drop-in OpenAI Proxy</div>
-        </div>
-        <div class="metric-card">
-            <span>Data Verification</span>
-            <h2>Real Verbatim</h2>
-            <div class="sub">0 Synthetic Data</div>
+        <div class="persona-card">
+            <strong>Persona C: Legal & Medical AI Teams</strong>
+            <p>Engineers in regulated industries who want to reduce LLM costs but are blocked by compliance teams worried about summaries dropping critical clauses.</p>
         </div>
     </div>
 
-    <div class="cluster-list" id="clusterList"></div>
+    <!-- Layman's Terms Matrix Table -->
+    <h3 style="font-size: 18px; margin-bottom: 14px; color: #fff;">💡 Plain English Problem-Solution & Value Prop Matrix</h3>
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Target Customer</th>
+                <th>What People Complain About</th>
+                <th>Real-World Analogy</th>
+                <th>Prexi Plain English Solution</th>
+            </tr>
+        </thead>
+        <tbody id="matrixBody"></tbody>
+    </table>
 
     <script>
         async function loadDashboard() {
@@ -87,42 +85,19 @@
                 const res = await fetch("./insights_data.json");
                 const data = await res.json();
 
-                const list = document.getElementById("clusterList");
-                list.innerHTML = "";
+                const body = document.getElementById("matrixBody");
+                body.innerHTML = "";
 
-                data.mapped_clusters.forEach(c => {
-                    const card = document.createElement("div");
-                    card.className = "cluster-card";
-
-                    let quotesHtml = "";
-                    c.real_scraped_quotes.forEach(q => {
-                        quotesHtml += `
-                            <div class="quote-item">
-                                <div class="quote-sub">[${q.subreddit}] Topic: ${q.post_title}</div>
-                                <div class="quote-text">"${q.comment_snippet}"</div>
-                            </div>
-                        `;
-                    });
-
-                    card.innerHTML = `
-                        <div class="cluster-header">
-                            <span class="cluster-title"># ${c.cluster_title}</span>
-                            <span class="cluster-vol">${c.matched_discussions.toLocaleString()} real matched discussions</span>
-                        </div>
-
-                        <div class="value-prop-box">
-                            <strong>⚡ Prexi Value Proposition & Solution:</strong>
-                            <p>${c.value_proposition} (System: ${c.prexi_system})</p>
-                        </div>
-
-                        <h4 style="font-size: 14px; color: var(--text-sub); margin-bottom: 10px;">💬 Real Verbatim Scraped Reddit Quotes (Sampled from Dataset):</h4>
-                        <div class="quotes-list">
-                            ${quotesHtml}
-                        </div>
+                data.laymans_matrix.forEach(row => {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `
+                        <td class="td-cust">${row["Customer Persona"]}</td>
+                        <td>${row["What People Complain About"]}</td>
+                        <td class="td-analogy">"${row["Real-World Analogy"]}"</td>
+                        <td class="td-sol">${row["Prexi Layman Solution"]}</td>
                     `;
-                    list.appendChild(card);
+                    body.appendChild(tr);
                 });
-
             } catch (e) { console.error(e); }
         }
         window.onload = loadDashboard;
