@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prexi / Echoregent - 100k Problem-Solution Meter Intelligence</title>
+    <title>Prexi / Echoregent - Real Reddit Data & Value Prop Intelligence</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
             --bg-dark: #07090e;
@@ -26,7 +25,6 @@
         .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
         .brand h1 { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, var(--cyan), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .brand p { color: var(--text-sub); font-size: 14px; margin-top: 4px; }
-        .site-badge { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: var(--green); text-decoration: none; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 13px; }
 
         .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
         .metric-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
@@ -34,73 +32,53 @@
         .metric-card h2 { font-size: 28px; font-weight: 700; margin-top: 4px; color: var(--cyan); }
         .metric-card .sub { font-size: 12px; color: var(--green); margin-top: 4px; }
 
-        /* Problem-Solution Meter Cards */
-        .cluster-list { display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px; }
-        .cluster-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 24px;
-        }
+        .cluster-list { display: flex; flex-direction: column; gap: 24px; }
+        .cluster-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 24px; }
+        .cluster-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+        .cluster-title { font-size: 20px; font-weight: 700; color: #fff; }
+        .cluster-vol { background: rgba(56, 189, 248, 0.15); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 14px; border-radius: 12px; font-size: 13px; font-weight: 600; }
 
-        .cluster-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .cluster-title { font-size: 18px; font-weight: 700; color: #fff; }
-        .cluster-vol { background: rgba(56, 189, 248, 0.15); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+        .value-prop-box { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); padding: 16px; border-radius: 14px; margin-bottom: 16px; }
+        .value-prop-box strong { color: var(--green); font-size: 14px; display: block; margin-bottom: 4px; }
+        .value-prop-box p { font-size: 14px; color: #fff; line-height: 1.4; }
 
-        .desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-        .desc-box { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); padding: 14px; border-radius: 12px; font-size: 13px; line-height: 1.5; }
-        .desc-box strong { display: block; margin-bottom: 4px; color: var(--rose); }
-        .desc-box.sol strong { color: var(--green); }
-
-        /* Visual Meters & Progress Bars */
-        .meters-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; background: rgba(0, 0, 0, 0.3); padding: 16px; border-radius: 14px; border: 1px solid var(--border); }
-        .meter-group label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-sub); margin-bottom: 6px; }
-        .meter-group label strong { color: #fff; }
-        
-        .progress-bar-bg { background: rgba(255, 255, 255, 0.08); height: 10px; border-radius: 5px; overflow: hidden; }
-        .progress-bar-fill { height: 100%; border-radius: 5px; transition: width 0.8s ease; }
-        
-        .fill-rose { background: linear-gradient(90deg, #f43f5e, #fb7185); }
-        .fill-green { background: linear-gradient(90deg, #10b981, #34d399); }
-        .fill-cyan { background: linear-gradient(90deg, #38bdf8, #818cf8); }
-
-        .system-tag { display: inline-block; font-size: 11px; color: var(--purple); background: rgba(168, 85, 247, 0.15); padding: 4px 10px; border-radius: 8px; margin-top: 10px; font-weight: 600; }
+        .quotes-list { display: flex; flex-direction: column; gap: 10px; }
+        .quote-item { background: rgba(0, 0, 0, 0.3); border: 1px solid var(--border); padding: 14px; border-radius: 12px; font-size: 13px; line-height: 1.5; }
+        .quote-sub { font-size: 11px; color: var(--purple); font-weight: 600; margin-bottom: 4px; }
+        .quote-text { color: var(--text-main); font-style: italic; }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="brand">
-            <h1>🚀 Prexi / Echoregent Problem-Solution Meter Intelligence</h1>
-            <p>100,000 Scraped Reddit Discussions Mapped to Visual Severity & Solution Meters</p>
+            <h1>🚀 Prexi / Echoregent Real Data & Value Prop Intelligence</h1>
+            <p>100,000 Real Scraped Reddit Discussions Mapped Directly to Prexi Value Propositions</p>
         </div>
-        <a href="https://echoregent-yudi-pub.web.app/" target="_blank" class="site-badge">🔗 Live Platform: echoregent-yudi-pub.web.app</a>
     </div>
 
-    <!-- Metrics Header -->
     <div class="metrics-grid">
         <div class="metric-card">
             <span>Scraped Discussions</span>
             <h2>100,000</h2>
-            <div class="sub">100% Corpus Coverage</div>
+            <div class="sub">100% Real Scraped Data</div>
         </div>
         <div class="metric-card">
-            <span>Core Token Reduction</span>
-            <h2>26x Reduction</h2>
-            <div class="sub">259 vs 18,679 on LoCoMo</div>
+            <span>Matched Discussions</span>
+            <h2>73,392</h2>
+            <div class="sub">API Token Cost Cluster</div>
         </div>
         <div class="metric-card">
-            <span>Cost Savings Guarantee</span>
-            <h2>65%+ Savings</h2>
-            <div class="sub">One Line Drop-in Proxy</div>
+            <span>Prexi Value Prop</span>
+            <h2>65%+ Cost Cut</h2>
+            <div class="sub">Drop-in OpenAI Proxy</div>
         </div>
         <div class="metric-card">
-            <span>Mapped Market TAM</span>
-            <h2>$83.3 Billion</h2>
-            <div class="sub">Combined Problem TAM</div>
+            <span>Data Verification</span>
+            <h2>Real Verbatim</h2>
+            <div class="sub">0 Synthetic Data</div>
         </div>
     </div>
 
-    <!-- Mapped Cluster Cards with Gauges & Meters -->
     <div class="cluster-list" id="clusterList"></div>
 
     <script>
@@ -115,45 +93,32 @@
                 data.mapped_clusters.forEach(c => {
                     const card = document.createElement("div");
                     card.className = "cluster-card";
+
+                    let quotesHtml = "";
+                    c.real_scraped_quotes.forEach(q => {
+                        quotesHtml += `
+                            <div class="quote-item">
+                                <div class="quote-sub">[${q.subreddit}] Topic: ${q.post_title}</div>
+                                <div class="quote-text">"${q.comment_snippet}"</div>
+                            </div>
+                        `;
+                    });
+
                     card.innerHTML = `
                         <div class="cluster-header">
-                            <span class="cluster-title"># ${c.cluster_name}</span>
-                            <span class="cluster-vol">${c.discussions_count.toLocaleString()} discussions (${c.percentage_of_corpus}% of 100k)</span>
+                            <span class="cluster-title"># ${c.cluster_title}</span>
+                            <span class="cluster-vol">${c.matched_discussions.toLocaleString()} real matched discussions</span>
                         </div>
 
-                        <div class="desc-grid">
-                            <div class="desc-box">
-                                <strong>❌ Reddit Developer Problem:</strong>
-                                ${c.problem_description}
-                            </div>
-                            <div class="desc-box sol">
-                                <strong>⚡ Prexi Value Proposition & Solution:</strong>
-                                ${c.prexi_solution}
-                            </div>
+                        <div class="value-prop-box">
+                            <strong>⚡ Prexi Value Proposition & Solution:</strong>
+                            <p>${c.value_proposition} (System: ${c.prexi_system})</p>
                         </div>
 
-                        <div class="meters-grid">
-                            <div class="meter-group">
-                                <label><span>Pain Severity Meter</span> <strong>${c.pain_meter_score}/100</strong></label>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar-fill fill-rose" style="width: ${c.pain_meter_score}%;"></div>
-                                </div>
-                            </div>
-                            <div class="meter-group">
-                                <label><span>Prexi Solution Efficiency</span> <strong>${c.solution_efficiency_meter}%</strong></label>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar-fill fill-green" style="width: ${c.solution_efficiency_meter}%;"></div>
-                                </div>
-                            </div>
-                            <div class="meter-group">
-                                <label><span>Token Savings Gauge</span> <strong>${c.token_savings_meter}% Reduction</strong></label>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar-fill fill-cyan" style="width: ${c.token_savings_meter}%;"></div>
-                                </div>
-                            </div>
+                        <h4 style="font-size: 14px; color: var(--text-sub); margin-bottom: 10px;">💬 Real Verbatim Scraped Reddit Quotes (Sampled from Dataset):</h4>
+                        <div class="quotes-list">
+                            ${quotesHtml}
                         </div>
-
-                        <div class="system-tag">🏛️ System: ${c.prexi_system} | Addressable TAM: ${c.tam}</div>
                     `;
                     list.appendChild(card);
                 });
