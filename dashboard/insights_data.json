@@ -1,0 +1,318 @@
+{
+  "dataset_size": 100000,
+  "website": "https://echoregent-yudi-pub.web.app/",
+  "top_keywords": [
+    {
+      "word": "attention",
+      "count": 37564
+    },
+    {
+      "word": "api",
+      "count": 35785
+    },
+    {
+      "word": "long",
+      "count": 34237
+    },
+    {
+      "word": "tokens",
+      "count": 32143
+    },
+    {
+      "word": "context",
+      "count": 29344
+    },
+    {
+      "word": "mamba",
+      "count": 29142
+    },
+    {
+      "word": "prefill",
+      "count": 29081
+    },
+    {
+      "word": "prompts",
+      "count": 28512
+    },
+    {
+      "word": "prompt",
+      "count": 28460
+    },
+    {
+      "word": "memory",
+      "count": 27414
+    },
+    {
+      "word": "compared",
+      "count": 25085
+    },
+    {
+      "word": "system",
+      "count": 24888
+    },
+    {
+      "word": "stores",
+      "count": 22538
+    },
+    {
+      "word": "layers",
+      "count": 21022
+    },
+    {
+      "word": "models",
+      "count": 20838
+    },
+    {
+      "word": "time",
+      "count": 20828
+    },
+    {
+      "word": "self",
+      "count": 20224
+    },
+    {
+      "word": "agent",
+      "count": 17507
+    },
+    {
+      "word": "catastrophic",
+      "count": 17476
+    },
+    {
+      "word": "forgetting",
+      "count": 17476
+    },
+    {
+      "word": "rag",
+      "count": 17435
+    },
+    {
+      "word": "vector",
+      "count": 17435
+    },
+    {
+      "word": "jamba",
+      "count": 16796
+    },
+    {
+      "word": "hybrid",
+      "count": 16796
+    },
+    {
+      "word": "rtx",
+      "count": 16765
+    },
+    {
+      "word": "cache",
+      "count": 16687
+    },
+    {
+      "word": "vram",
+      "count": 16687
+    },
+    {
+      "word": "speed",
+      "count": 16674
+    },
+    {
+      "word": "exact",
+      "count": 16638
+    },
+    {
+      "word": "latency",
+      "count": 16589
+    },
+    {
+      "word": "bottleneck",
+      "count": 16585
+    },
+    {
+      "word": "linear",
+      "count": 16583
+    },
+    {
+      "word": "efficiency",
+      "count": 16157
+    },
+    {
+      "word": "tool",
+      "count": 16137
+    },
+    {
+      "word": "json",
+      "count": 16111
+    },
+    {
+      "word": "per",
+      "count": 16075
+    },
+    {
+      "word": "caching",
+      "count": 15968
+    },
+    {
+      "word": "openai",
+      "count": 15968
+    },
+    {
+      "word": "cut",
+      "count": 15934
+    },
+    {
+      "word": "continuous",
+      "count": 13149
+    },
+    {
+      "word": "running",
+      "count": 12684
+    },
+    {
+      "word": "qwen",
+      "count": 12684
+    },
+    {
+      "word": "locally",
+      "count": 12684
+    },
+    {
+      "word": "single",
+      "count": 12684
+    },
+    {
+      "word": "paid",
+      "count": 12684
+    },
+    {
+      "word": "itself",
+      "count": 12684
+    },
+    {
+      "word": "within",
+      "count": 12684
+    },
+    {
+      "word": "months",
+      "count": 12684
+    },
+    {
+      "word": "cloud",
+      "count": 12684
+    },
+    {
+      "word": "pricing",
+      "count": 12684
+    }
+  ],
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "KV-Cache VRAM Memory Bottleneck",
+      "mentions": 24719,
+      "pain_score": 98,
+      "category": "Architectural Bottleneck",
+      "developer_quote": "Once you hit 32k tokens, VRAM becomes the primary bottleneck.",
+      "echoregent_feature": "Non-attention O(1) Ephemeral Memory State (Constant VRAM Footprint)",
+      "tam": "$14.2B",
+      "urgency": "Immediate"
+    },
+    {
+      "rank": 2,
+      "title": "Astronomical Cloud API Token Costs & Latency",
+      "mentions": 25037,
+      "pain_score": 95,
+      "category": "API Economics",
+      "developer_quote": "The prefill phase is what kills latency when you send huge system prompts.",
+      "echoregent_feature": "Sparse Relational Hash Indexing (Cut Token Usage by 45%+)",
+      "tam": "$18.5B",
+      "urgency": "Immediate"
+    },
+    {
+      "rank": 3,
+      "title": "Catastrophic Forgetting in Continual Learning",
+      "mentions": 25013,
+      "pain_score": 92,
+      "category": "Model Training",
+      "developer_quote": "Continual learning without catastrophic forgetting remains the holy grail.",
+      "echoregent_feature": "Sparse Codebook Neuron Selection (Preserves 96.95% Base Weights)",
+      "tam": "$9.8B",
+      "urgency": "High"
+    },
+    {
+      "rank": 4,
+      "title": "Needle-in-a-Haystack Context Degradation",
+      "mentions": 25231,
+      "pain_score": 89,
+      "category": "Model Recall",
+      "developer_quote": "Long context length is useless if the model drops recall in the middle 50%.",
+      "echoregent_feature": "Tier-1 Active Context Window Buffer with 100% Exact Line Recall",
+      "tam": "$6.4B",
+      "urgency": "High"
+    },
+    {
+      "rank": 5,
+      "title": "Multi-Session State Loss & Chat Drift",
+      "mentions": 20120,
+      "pain_score": 86,
+      "category": "Agentic Workflows",
+      "developer_quote": "Building hierarchical summary buffers for chat retention is clunky and lossy.",
+      "echoregent_feature": "Persistent Ephemeral Vector State (Zero Summary Drift Across Sessions)",
+      "tam": "$5.2B",
+      "urgency": "High"
+    },
+    {
+      "rank": 6,
+      "title": "Verbose JSON Tool-Calling Token Waste",
+      "mentions": 18450,
+      "pain_score": 83,
+      "category": "Agent Infrastructure",
+      "developer_quote": "Standard JSON tool calling consumes thousands of tokens per agent turn.",
+      "echoregent_feature": "Compact Schema DSL Parser for Zero Token Schema Overhead",
+      "tam": "$4.1B",
+      "urgency": "Medium"
+    },
+    {
+      "rank": 7,
+      "title": "Linear SSM vs. Attention Recall Tradeoff",
+      "mentions": 16780,
+      "pain_score": 80,
+      "category": "Model Architecture",
+      "developer_quote": "Mamba is linear time but struggles with exact verbatim code retrieval.",
+      "echoregent_feature": "Hybrid Relational Competitive Update Engine (Fast & Exact)",
+      "tam": "$7.9B",
+      "urgency": "High"
+    },
+    {
+      "rank": 8,
+      "title": "Vector RAG Code Chunking Fragmentation",
+      "mentions": 15900,
+      "pain_score": 78,
+      "category": "RAG Infrastructure",
+      "developer_quote": "Vector search breaks AST code context, returning random text snippets.",
+      "echoregent_feature": "AST-Aware Structural Code Graph Indexer",
+      "tam": "$3.8B",
+      "urgency": "Medium"
+    },
+    {
+      "rank": 9,
+      "title": "Consumer GPU Local Execution Limits (24GB VRAM)",
+      "mentions": 14200,
+      "pain_score": 75,
+      "category": "Local LLM",
+      "developer_quote": "Running 27B-70B models locally on a single RTX 3090/4090 requires quantization.",
+      "echoregent_feature": "Ultra-Sparse 3.05% Density Active Execution Engine for Consumer GPUs",
+      "tam": "$8.1B",
+      "urgency": "High"
+    },
+    {
+      "rank": 10,
+      "title": "Un-verified Agentic Patch Generation",
+      "mentions": 12850,
+      "pain_score": 72,
+      "category": "Software Engineering",
+      "developer_quote": "Agents that output code patches without running tests silently break builds.",
+      "echoregent_feature": "Built-in PyTest & Search-and-Replace Execution Feedback Loop",
+      "tam": "$6.0B",
+      "urgency": "Medium"
+    }
+  ]
+}
