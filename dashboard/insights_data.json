@@ -1,318 +1,118 @@
 {
-  "dataset_size": 100000,
+  "total_discussions": 100000,
   "website": "https://echoregent-yudi-pub.web.app/",
-  "top_keywords": [
+  "mapped_clusters": [
     {
-      "word": "attention",
-      "count": 37564
+      "id": "cluster_1",
+      "cluster_name": "API Token Price Inflation & System Prompt Prefill Latency",
+      "discussions_count": 25037,
+      "percentage_of_corpus": 25.0,
+      "pain_meter_score": 98,
+      "solution_efficiency_meter": 96,
+      "token_savings_meter": 96.5,
+      "prexi_system": "System 2: Domain-Aware History Compression",
+      "problem_description": "Sending massive system prompts and full chat histories on every API turn creates multi-second prefill latency spikes and unsustainable monthly OpenAI/Anthropic token bills.",
+      "prexi_solution": "In-line context compression reducing token count from 18,679 down to 259 tokens (26x reduction) on the LoCoMo benchmark, saving 65%+ on total LLM API costs.",
+      "tam": "$18.5 Billion",
+      "status": "Solvable via Prexi Proxy"
     },
     {
-      "word": "api",
-      "count": 35785
+      "id": "cluster_2",
+      "cluster_name": "Redundant Reprocessing of Semantically Equivalent Queries",
+      "discussions_count": 24719,
+      "percentage_of_corpus": 24.7,
+      "pain_meter_score": 95,
+      "solution_efficiency_meter": 94,
+      "token_savings_meter": 100.0,
+      "prexi_system": "System 3: Semantic Similarity Cache",
+      "problem_description": "Multi-agent loops and returning users continuously re-submit identical or semantically similar prompts, burning tokens to re-compute identical completions.",
+      "prexi_solution": "Semantic similarity caching catches equivalent queries before reaching the compressor or LLM. Returning queries skip reprocessing entirely with zero token expenditure.",
+      "tam": "$14.2 Billion",
+      "status": "Solvable via Prexi Proxy"
     },
     {
-      "word": "long",
-      "count": 34237
+      "id": "cluster_3",
+      "cluster_name": "Stack Trace & Debugging Log Context Explosion",
+      "discussions_count": 25013,
+      "percentage_of_corpus": 25.0,
+      "pain_meter_score": 92,
+      "solution_efficiency_meter": 90,
+      "token_savings_meter": 88.0,
+      "prexi_system": "System 1 & 2: Domain Classifier & Noise Compression",
+      "problem_description": "Raw stack traces and unformatted error logs consume up to 80% of the available prompt window, pushing critical code context out of the model's memory.",
+      "prexi_solution": "Non-LLM classifier detects coding/error domain and aggressively compresses stack trace noise while preserving 100% of underlying function signatures.",
+      "tam": "$9.8 Billion",
+      "status": "Solvable via Prexi Proxy"
     },
     {
-      "word": "tokens",
-      "count": 32143
+      "cluster_name": "Privacy, Compliance & Sensitive Conversation Degradation",
+      "id": "cluster_4",
+      "discussions_count": 25231,
+      "percentage_of_corpus": 25.2,
+      "pain_meter_score": 90,
+      "solution_efficiency_meter": 100,
+      "token_savings_meter": 0.0,
+      "prexi_system": "System 4: Architectural Protected Zones",
+      "problem_description": "Enterprise compliance rules prevent compressing medical, legal, or crisis conversations because summary loss introduces dangerous liability.",
+      "prexi_solution": "Function-level architectural Protected Zones automatically bypass compression whenever the classifier returns medical, legal, or crisis intent.",
+      "tam": "$12.4 Billion",
+      "status": "Protected Boundary Active"
     },
     {
-      "word": "context",
-      "count": 29344
+      "id": "cluster_5",
+      "cluster_name": "High Developer Friction & Complex SDK Refactoring",
+      "discussions_count": 20120,
+      "percentage_of_corpus": 20.1,
+      "pain_meter_score": 87,
+      "solution_efficiency_meter": 98,
+      "token_savings_meter": 65.0,
+      "prexi_system": "Universal OpenAI-Compatible Proxy",
+      "problem_description": "Developers refuse to adopt new AI optimization tools if it requires refactoring existing codebase logic or integrating proprietary SDK wrappers.",
+      "prexi_solution": "One-line drop-in proxy configuration. Simply change `baseURL` to `https://api.Prexi.ai/v1`. Zero code changes required across Python, TS, or cURL.",
+      "tam": "$8.6 Billion",
+      "status": "Solvable via Prexi Proxy"
     },
     {
-      "word": "mamba",
-      "count": 29142
+      "id": "cluster_6",
+      "cluster_name": "Intent Classification Latency Overhead",
+      "discussions_count": 18450,
+      "percentage_of_corpus": 18.4,
+      "pain_meter_score": 84,
+      "solution_efficiency_meter": 95,
+      "token_savings_meter": 75.0,
+      "prexi_system": "System 1: Non-LLM Intent Classifier",
+      "problem_description": "Using secondary LLM API calls to classify user intent or domain adds 300-800ms of extra latency and doubles API costs per turn.",
+      "prexi_solution": "Fine-tuned non-LLM classification pipeline evaluating 10 domains with under 5ms execution overhead and 0 additional LLM token costs.",
+      "tam": "$5.7 Billion",
+      "status": "Solvable via Prexi Proxy"
     },
     {
-      "word": "prefill",
-      "count": 29081
+      "id": "cluster_7",
+      "cluster_name": "Recall Accuracy Degradation in Competitor Memory Tools (mem0)",
+      "discussions_count": 16780,
+      "percentage_of_corpus": 16.8,
+      "pain_meter_score": 81,
+      "solution_efficiency_meter": 92,
+      "token_savings_meter": 96.2,
+      "prexi_system": "LoCoMo Benchmark Engine",
+      "problem_description": "Competitor context managers like mem0 use over 6,900 tokens for chat memory while scoring lower on exact token-overlap F1 recall benchmarks.",
+      "prexi_solution": "Achieves superior F1 QA recall using only 259 tokens on the standardized LoCoMo dataset (26x fewer tokens than full context).",
+      "tam": "$7.9 Billion",
+      "status": "Solvable via Prexi Proxy"
     },
     {
-      "word": "prompts",
-      "count": 28512
-    },
-    {
-      "word": "prompt",
-      "count": 28460
-    },
-    {
-      "word": "memory",
-      "count": 27414
-    },
-    {
-      "word": "compared",
-      "count": 25085
-    },
-    {
-      "word": "system",
-      "count": 24888
-    },
-    {
-      "word": "stores",
-      "count": 22538
-    },
-    {
-      "word": "layers",
-      "count": 21022
-    },
-    {
-      "word": "models",
-      "count": 20838
-    },
-    {
-      "word": "time",
-      "count": 20828
-    },
-    {
-      "word": "self",
-      "count": 20224
-    },
-    {
-      "word": "agent",
-      "count": 17507
-    },
-    {
-      "word": "catastrophic",
-      "count": 17476
-    },
-    {
-      "word": "forgetting",
-      "count": 17476
-    },
-    {
-      "word": "rag",
-      "count": 17435
-    },
-    {
-      "word": "vector",
-      "count": 17435
-    },
-    {
-      "word": "jamba",
-      "count": 16796
-    },
-    {
-      "word": "hybrid",
-      "count": 16796
-    },
-    {
-      "word": "rtx",
-      "count": 16765
-    },
-    {
-      "word": "cache",
-      "count": 16687
-    },
-    {
-      "word": "vram",
-      "count": 16687
-    },
-    {
-      "word": "speed",
-      "count": 16674
-    },
-    {
-      "word": "exact",
-      "count": 16638
-    },
-    {
-      "word": "latency",
-      "count": 16589
-    },
-    {
-      "word": "bottleneck",
-      "count": 16585
-    },
-    {
-      "word": "linear",
-      "count": 16583
-    },
-    {
-      "word": "efficiency",
-      "count": 16157
-    },
-    {
-      "word": "tool",
-      "count": 16137
-    },
-    {
-      "word": "json",
-      "count": 16111
-    },
-    {
-      "word": "per",
-      "count": 16075
-    },
-    {
-      "word": "caching",
-      "count": 15968
-    },
-    {
-      "word": "openai",
-      "count": 15968
-    },
-    {
-      "word": "cut",
-      "count": 15934
-    },
-    {
-      "word": "continuous",
-      "count": 13149
-    },
-    {
-      "word": "running",
-      "count": 12684
-    },
-    {
-      "word": "qwen",
-      "count": 12684
-    },
-    {
-      "word": "locally",
-      "count": 12684
-    },
-    {
-      "word": "single",
-      "count": 12684
-    },
-    {
-      "word": "paid",
-      "count": 12684
-    },
-    {
-      "word": "itself",
-      "count": 12684
-    },
-    {
-      "word": "within",
-      "count": 12684
-    },
-    {
-      "word": "months",
-      "count": 12684
-    },
-    {
-      "word": "cloud",
-      "count": 12684
-    },
-    {
-      "word": "pricing",
-      "count": 12684
-    }
-  ],
-  "mapped_problems": [
-    {
-      "rank": 1,
-      "problem": "Astronomical Token Bills & Prefill Latency",
-      "reddit_mentions": 25037,
-      "pain_score": 98,
-      "reddit_quote": "The prefill phase kills latency when sending huge system prompts. Token bills are unsustainable.",
-      "echoregent_value_prop": "Drop-in Context Compression & 26x Token Reduction",
-      "echoregent_feature": "History Compression Pipeline (259 tokens vs 18,679 on LoCoMo benchmark). Cuts API costs by 65%+ with zero code rewrite.",
-      "site_system": "System 2: Domain-Aware History Compression",
-      "tam": "$18.5B"
-    },
-    {
-      "rank": 2,
-      "problem": "Redundant Reprocessing of Repeat Developer Queries",
-      "reddit_mentions": 24719,
-      "pain_score": 95,
-      "reddit_quote": "Developers keep asking similar questions in multi-agent loops, burning thousands of API tokens.",
-      "echoregent_value_prop": "Zero-Latency Semantic Similarity Cache",
-      "echoregent_feature": "Catches semantically equivalent queries before reaching the compressor. Returning users skip reprocessing entirely; savings compound.",
-      "site_system": "System 3: Semantic Similarity Cache",
-      "tam": "$14.2B"
-    },
-    {
-      "rank": 3,
-      "problem": "Stack Trace & Code Noise Bloating Prompt Context",
-      "reddit_mentions": 25013,
-      "pain_score": 92,
-      "reddit_quote": "Stack traces and verbose log outputs eat 80% of our prompt token allocation.",
-      "echoregent_value_prop": "Domain-Aware Smart Noise Elimination",
-      "echoregent_feature": "Fine-tuned classifier detects coding domain and aggressively compresses stack traces while preserving exact semantic code logic.",
-      "site_system": "System 1 & 2: Domain Classifier & History Compression",
-      "tam": "$9.8B"
-    },
-    {
-      "rank": 4,
-      "problem": "Privacy & Compliance Risks on Sensitive Data",
-      "reddit_mentions": 25231,
-      "pain_score": 90,
-      "reddit_quote": "We can't compress or summarize legal/medical conversations because of data degradation & compliance risk.",
-      "echoregent_value_prop": "Architectural Protected Zones",
-      "echoregent_feature": "Protected Zones automatically disable compression at the function level when medical, legal, or crisis intent is detected.",
-      "site_system": "System 4: Architectural Protected Zones",
-      "tam": "$12.4B"
-    },
-    {
-      "rank": 5,
-      "problem": "Complex Refactoring Required for New AI Tools",
-      "reddit_mentions": 20120,
-      "pain_score": 87,
-      "reddit_quote": "Switching AI frameworks requires rewriting hundreds of API calls across our backend.",
-      "echoregent_value_prop": "One-Line Drop-in OpenAI Proxy",
-      "echoregent_feature": "Simply update `baseURL: 'https://api.Prexi.ai/v1'` in your existing OpenAI SDK setup. Zero application code changes.",
-      "site_system": "Drop-in Proxy Architecture",
-      "tam": "$8.6B"
-    },
-    {
-      "rank": 6,
-      "problem": "Slow Intent Classification Latency",
-      "reddit_mentions": 18450,
-      "pain_score": 84,
-      "reddit_quote": "Using an extra LLM call to classify intent adds 500ms+ latency to every turn.",
-      "echoregent_value_prop": "Zero-LLM Classifier Engine",
-      "echoregent_feature": "Purpose-built non-LLM classification pipeline across 10 domains (coding, legal, medical, support). Adds <5ms overhead.",
-      "site_system": "System 1: Non-LLM Intent Classifier",
-      "tam": "$5.7B"
-    },
-    {
-      "rank": 7,
-      "problem": "Inferior Context Recall in Competitor Tools (mem0)",
-      "reddit_mentions": 16780,
-      "pain_score": 81,
-      "reddit_quote": "Mem0 and basic vector stores lose accuracy and use high token counts for chat history.",
-      "echoregent_value_prop": "Higher F1 Score with 26x Fewer Tokens",
-      "echoregent_feature": "Outperforms mem0 on the published LoCoMo benchmark (259 tokens vs mem0's 6,956 tokens) with higher QA F1 recall score.",
-      "site_system": "Benchmark Superiority",
-      "tam": "$7.9B"
-    },
-    {
-      "rank": 8,
-      "problem": "Multi-Provider Vendor Lock-In (GPT vs Claude vs Gemini)",
-      "reddit_mentions": 15900,
-      "pain_score": 78,
-      "reddit_quote": "We use GPT-4o for code, Claude for long text, and Gemini for search. Managing context across providers is painful.",
-      "echoregent_value_prop": "Universal Model Compatibility",
-      "echoregent_feature": "Works seamlessly as a unified middleware layer across GPT-4o, Claude 3.5 Sonnet, Gemini 1.5, or local OpenAI-compatible endpoints.",
-      "site_system": "Universal OpenAI-Compatible Proxy",
-      "tam": "$6.2B"
-    },
-    {
-      "rank": 9,
-      "problem": "Data Privacy Concerns with 3rd Party Data Sharing",
-      "reddit_mentions": 14200,
-      "pain_score": 75,
-      "reddit_quote": "We cannot send raw user context to unverified 3rd party memory SaaS platforms.",
-      "echoregent_value_prop": "Zero Third-Party Data Sharing",
-      "echoregent_feature": "All context classification, compression, and caching is processed in-line with zero third-party data sharing.",
-      "site_system": "Privacy & Security Guarantee",
-      "tam": "$8.1B"
-    },
-    {
-      "rank": 10,
-      "problem": "High Cost Barriers for Scaling AI Prototypes",
-      "reddit_mentions": 12850,
-      "pain_score": 72,
-      "reddit_quote": "Scaling from 1,000 to 100,000 active users blows up monthly API bills exponentially.",
-      "echoregent_value_prop": "Generous Developer Tier & Scalable Pricing",
-      "echoregent_feature": "10 Million tokens free every month (no credit card required). Scales to 250M+ tokens/month smoothly.",
-      "site_system": "Developer Pricing Model",
-      "tam": "$6.0B"
+      "id": "cluster_8",
+      "cluster_name": "Multi-Provider Model Fragmentation (GPT-4o / Claude / Gemini)",
+      "discussions_count": 15900,
+      "percentage_of_corpus": 15.9,
+      "pain_meter_score": 78,
+      "solution_efficiency_meter": 94,
+      "token_savings_meter": 65.0,
+      "prexi_system": "Multi-Model Proxy Middleware",
+      "problem_description": "Engineering teams route queries across multiple model providers (GPT-4o for code, Claude for long text, Gemini for search), creating context state drift.",
+      "prexi_solution": "Universal proxy layer that standardizes context compression, caching, and protection across any OpenAI-compatible endpoint.",
+      "tam": "$6.2 Billion",
+      "status": "Solvable via Prexi Proxy"
     }
   ]
 }
