@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echoregent / Prexi - Founder Market & Value Prop Intelligence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
@@ -34,6 +34,45 @@
         .metric-card h2 { font-size: 28px; font-weight: 700; margin-top: 4px; color: var(--cyan); }
         .metric-card .sub { font-size: 12px; color: var(--green); margin-top: 4px; }
 
+        /* Benchmark Infographic Section */
+        .benchmark-box {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(168, 85, 247, 0.08));
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .benchmark-info h3 { font-size: 20px; color: #fff; margin-bottom: 6px; }
+        .benchmark-info p { color: var(--text-sub); font-size: 14px; line-height: 1.5; }
+        .locomo-stats { display: flex; gap: 16px; margin-top: 16px; }
+        .stat-badge { background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border); padding: 10px 16px; border-radius: 12px; }
+        .stat-badge strong { font-size: 20px; color: var(--green); display: block; }
+        .stat-badge label { font-size: 11px; color: var(--text-sub); }
+
+        .code-box {
+            background: #000;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            color: var(--cyan);
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+
+        /* 4 Systems Layout */
+        .systems-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 24px; }
+        .system-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+        .sys-num { background: rgba(56, 189, 248, 0.15); color: var(--cyan); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; margin-bottom: 8px; }
+        .sys-name { font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 4px; }
+        .sys-desc { font-size: 12px; color: var(--text-sub); line-height: 1.4; }
+
         .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 24px; }
         .box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 20px; }
         .box h3 { font-size: 17px; font-weight: 700; margin-bottom: 14px; color: #fff; }
@@ -60,6 +99,7 @@
         <a href="https://echoregent-yudi-pub.web.app/" target="_blank" class="site-badge">🔗 Live Website: echoregent-yudi-pub.web.app</a>
     </div>
 
+    <!-- Metrics Grid -->
     <div class="metrics-grid">
         <div class="metric-card">
             <span>Discussions Mapped</span>
@@ -83,6 +123,61 @@
         </div>
     </div>
 
+    <!-- LoCoMo Benchmark & One-Line Integration Card -->
+    <div class="benchmark-box">
+        <div class="benchmark-info">
+            <h3>🏆 LoCoMo Benchmark Superiority (26x Token Reduction)</h3>
+            <p>Measured on LoCoMo — the same benchmark mem0 uses in published results. Prexi delivers higher F1 recall accuracy while using 26x fewer tokens.</p>
+            <div class="locomo-stats">
+                <div class="stat-badge">
+                    <strong>259 Tokens</strong>
+                    <label>Echoregent / Prexi</label>
+                </div>
+                <div class="stat-badge">
+                    <strong style="color: var(--amber);">6,956 Tokens</strong>
+                    <label>mem0 Benchmark</label>
+                </div>
+                <div class="stat-badge">
+                    <strong style="color: var(--rose);">18,679 Tokens</strong>
+                    <label>Full Context Baseline</label>
+                </div>
+            </div>
+        </div>
+        <div class="code-box">
+            <div>// One line. Any model.</div>
+            <div style="color: #fff;">const openai = new OpenAI({</div>
+            <div style="padding-left: 12px;">apiKey: "sk-...",</div>
+            <div style="padding-left: 12px; color: var(--green);">baseURL: "https://api.Prexi.ai/v1",</div>
+            <div style="padding-left: 12px;">defaultHeaders: { "x-cts-key": "your-key" }</div>
+            <div style="color: #fff;">});</div>
+        </div>
+    </div>
+
+    <!-- 4 Core Product Systems -->
+    <div class="systems-grid">
+        <div class="system-card">
+            <div class="sys-num">1</div>
+            <div class="sys-name">Domain & Intent Classifier</div>
+            <div class="sys-desc">Fine-tuned non-LLM classifier across 10 domains returning intent, domain & risk level (<5ms overhead).</div>
+        </div>
+        <div class="system-card">
+            <div class="sys-num">2</div>
+            <div class="sys-name">History Compression</div>
+            <div class="sys-desc">Domain-aware compression. Stack traces compress aggressively while code logic remains intact.</div>
+        </div>
+        <div class="system-card">
+            <div class="sys-num">3</div>
+            <div class="sys-name">Semantic Similarity Cache</div>
+            <div class="sys-desc">Catches semantically equivalent queries in-line; returning users skip reprocessing entirely.</div>
+        </div>
+        <div class="system-card">
+            <div class="sys-num">4</div>
+            <div class="sys-name">Architectural Protected Zones</div>
+            <div class="sys-desc">Function-level non-compression boundary for medical, legal, and crisis conversations.</div>
+        </div>
+    </div>
+
+    <!-- Main Section -->
     <div class="main-grid">
         <div class="box">
             <h3>📊 Top 15 Technical Terms in 100k Developer Corpus</h3>
@@ -95,6 +190,7 @@
         </div>
     </div>
 
+    <!-- Keywords Grid -->
     <div class="box">
         <h3>🔥 Top 50 Scraped AI Technical Terms (Live Counts)</h3>
         <div class="keywords-grid" id="keywordGrid"></div>
